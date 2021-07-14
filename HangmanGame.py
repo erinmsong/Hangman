@@ -10,7 +10,7 @@ MAX_STRIKES = 5
 def get_random_word():
     words = ['apple', 'banana', 'coconut', 'dill', 'eggplant', 'fruit', 'grape', 'mango', 'pear', 'strawberry']
     ind = random.randint(0, len(words)-1)
-    return words[ind]
+    return words[ind].upper()
 
 def update_blanks(gues, targ, t_print):
     index = 0
@@ -43,9 +43,9 @@ def make_array(targ):
     return arr
 
 def get_input():
-    g = str(input("\nGuess a letter from A-Z: "))
+    g = str(input("\nGuess a letter from A-Z: ")).upper()
     while(g.isalpha() == False):
-        g = str(input("\nPlease try again with a letter: "))
+        g = str(input("\nPlease try again with a letter: ")).upper()
 
     return g
 
